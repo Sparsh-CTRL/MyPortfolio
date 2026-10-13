@@ -1,0 +1,331 @@
+.hero-section{
+background:var(--parchment);
+}
+
+/* scroll container */
+
+.hero-scroll{
+height:160vh;
+position:relative;
+}
+
+/* sticky hero */
+
+.hero-stage{
+position:sticky;
+top:0;
+height:100vh;
+display:flex;
+align-items:center;
+}
+
+/* layout */
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    max-width: 94%;
+    margin: auto;
+    width: 100%;
+}
+
+/* left column */
+
+.hero-left{
+display:flex;
+flex-direction:column;
+gap:12px;
+}
+
+/* right column */
+
+.hero-right{
+display:flex;
+justify-content:center;
+height: 580px;
+}
+
+/* pill */
+
+.hero-pill{
+display:inline-flex;
+align-items:center;
+gap:8px;
+
+background:var(--ink);
+color:var(--gold);
+
+padding:8px 16px;
+
+border-radius:100px;
+
+font-family:var(--font-mono);
+font-size:11px;
+}
+
+.hero-dot{
+width:7px;
+height:7px;
+border-radius:50%;
+background:var(--sage);
+}
+
+/* title */
+
+.hero-title{
+font-family:var(--font-display);
+font-size:80px;
+font-weight:800;
+line-height:0.9;
+}
+
+.accent{
+color:var(--sage);
+}
+
+/* outline text */
+
+.hero-outline{
+font-family:var(--font-display);
+font-size:80px;
+font-weight:800;
+
+color:transparent;
+-webkit-text-stroke:2px var(--ink);
+}
+
+/* description */
+
+.hero-desc{
+font-size:18px;
+color:var(--ink-70);
+max-width:480px;
+line-height:1.6;
+}
+
+/* buttons */
+
+.hero-buttons{
+display:flex;
+gap:16px;
+}
+
+.btn-primary{
+background:var(--sage);
+color:white;
+
+padding:16px 30px;
+border-radius:12px;
+
+font-weight:600;
+text-decoration:none;
+}
+
+.btn-secondary{
+background:var(--gold);
+color:var(--ink);
+
+padding:16px 30px;
+border-radius:12px;
+
+font-weight:600;
+text-decoration:none;
+}
+
+/* stats */
+
+.hero-stats{
+display:flex;
+gap:40px;
+}
+
+.stat-number{
+font-family:var(--font-display);
+font-size:32px;
+font-weight:800;
+}
+
+.stat-label{
+font-size:12px;
+color:var(--ink-40);
+}
+
+/* terminal */
+
+.terminal{
+width:420px;
+
+background:#111;
+color:#eee;
+
+border-radius:14px;
+overflow:hidden;
+
+box-shadow:0 20px 80px rgba(0,0,0,0.3);
+}
+
+/* terminal header */
+
+.terminal-header{
+display:flex;
+align-items:center;
+gap:8px;
+
+padding:10px;
+
+background:#222;
+}
+
+.dot{
+width:10px;
+height:10px;
+border-radius:50%;
+}
+
+.red{background:#ff5f57;}
+.yellow{background:#ffbd2e;}
+.green{background:#28c840;}
+
+.terminal-title{
+margin-left:10px;
+font-family:var(--font-mono);
+font-size:12px;
+}
+
+/* terminal body */
+
+.terminal-body{
+    padding: 20px;
+    font-family: var(--font-mono);
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.green{
+color:#8BAF29;
+}
+.scroll-hint{
+
+position:absolute;
+
+bottom:40px;
+
+left:45%;
+
+transform:translateX(-50%);
+
+display:flex;
+
+flex-direction:column;
+
+align-items:center;
+
+gap:10px;
+
+font-family:var(--font-mono);
+
+font-size:12px;
+
+color:var(--ink-50);
+
+letter-spacing:0.1em;
+
+}
+.scroll-wheel{
+
+width:22px;
+height:34px;
+
+border:2px solid var(--ink-40);
+
+border-radius:20px;
+
+position:relative;
+
+}
+
+.scroll-wheel::after{
+
+content:"";
+
+position:absolute;
+
+top:6px;
+left:50%;
+
+width:4px;
+height:6px;
+
+background:var(--ink-40);
+
+border-radius:3px;
+
+transform:translateX(-50%);
+
+animation:scroll-wheel 1.4s infinite;
+
+}
+.ascii-art{
+font-family: "JetBrains Mono", monospace;
+font-size:8px;
+line-height:8px;
+white-space:pre;
+color:#9ca3af;
+}
+
+@keyframes scroll-wheel{
+
+0%{
+opacity:0;
+transform:translate(-50%,0);
+}
+
+50%{
+opacity:1;
+}
+
+100%{
+opacity:0;
+transform:translate(-50%,10px);
+}
+
+}
+.terminal{
+transform-style: preserve-3d;
+transition: box-shadow .25s ease;
+}
+
+.terminal:hover{
+box-shadow:
+0 30px 80px rgba(0,0,0,0.25);
+}
+
+/* cursor */
+.cursor {
+  display: inline-block;
+  width: 8px;
+  height: 1em;
+  background: currentColor;
+  margin-left: 4px;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+/* outline cursor fix */
+.outline-cursor {
+  background: var(--ink);
+}
+
+/* subtle glow */
+.hero-title {
+  text-shadow: 0 0 10px rgba(0,0,0,0.08);
+}
+.dynamic-word{
+  display:inline-block;
+  min-width: 220px; /* adjust based on longest word */
+}
+.sparsh-portrait { display:block; width:min(100%, 320px); max-height:360px; object-fit:cover; object-position:center 28%; margin:18px auto; border-radius:16px; border:1px solid rgba(255,255,255,.16); }

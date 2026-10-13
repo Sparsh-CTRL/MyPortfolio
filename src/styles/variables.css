@@ -1,0 +1,26 @@
+:root {
+
+  --parchment: #F5F0E8;
+  --parchment-light: #FAF7F0;
+  --parchment-dark: #EDE6D6;
+
+  --gold: #FEC345;
+  --gold-dark: #DF9A06;
+
+  --sage: #8BAF29;
+  --sage-light: #C4CD4E;
+
+  --coral: #E57373;
+  --blue: #BACDED;
+
+  --ink: #201D1E;
+  --ink-70: rgba(32,29,30,0.7);
+  --ink-40: rgba(32,29,30,0.4);
+
+  --border: rgba(32,29,30,0.10);
+
+  --font-display: 'Syne', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+  --font-mono: 'DM Mono', monospace;
+
+}

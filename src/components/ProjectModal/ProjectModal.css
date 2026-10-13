@@ -1,0 +1,237 @@
+/* overlay */
+
+.modal-overlay{
+
+position:fixed;
+inset:0;
+
+background:rgba(0,0,0,0.45);
+backdrop-filter:blur(10px);
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+z-index:1000;
+
+}
+
+
+/* container */
+
+.modal-container{
+
+width:85vw;
+height:70vh;
+
+background:var(--parchment-light);
+
+border-radius:24px;
+
+display:grid;
+grid-template-columns:1fr 1fr;
+
+overflow:hidden;
+
+box-shadow:
+0 10px 40px rgba(0,0,0,0.08),
+0 40px 120px rgba(0,0,0,0.12);
+
+}
+
+
+/* LEFT SIDE */
+
+.modal-left{
+
+background:var(--parchment);
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+padding:12px;
+
+overflow:hidden;
+
+border-right:1px solid var(--border);
+
+}
+
+
+/* carousel image */
+
+.carousel-image{
+
+width:100%;
+height:100%;
+
+object-fit:fit;
+
+border-radius:14px;
+
+box-shadow:
+0 10px 40px rgba(0,0,0,0.08),
+0 20px 80px rgba(0,0,0,0.10);
+
+}
+
+
+/* RIGHT SIDE */
+
+.modal-right{
+
+padding:40px;
+
+display:flex;
+flex-direction:column;
+
+justify-content:flex-start;
+
+}
+
+
+/* title */
+
+.modal-title{
+
+font-family:var(--font-display);
+
+font-size:42px;
+font-weight:800;
+
+letter-spacing:-0.02em;
+
+margin-bottom:18px;
+
+color:var(--ink);
+
+}
+
+
+/* description */
+
+.modal-desc{
+
+font-size:17px;
+
+color:var(--ink-70);
+
+line-height:1.6;
+
+margin-bottom:28px;
+
+max-width:520px;
+
+}
+
+
+/* tech pills */
+
+.modal-tech{
+
+display:flex;
+flex-wrap:wrap;
+
+gap:10px;
+
+margin-bottom:30px;
+
+}
+
+
+.modal-tech-pill{
+
+background:var(--parchment-dark);
+
+padding:6px 12px;
+
+border-radius:6px;
+
+font-family:var(--font-mono);
+
+font-size:11px;
+
+border:1px solid var(--border);
+
+}
+
+
+/* buttons */
+
+.modal-links{
+
+display:flex;
+
+gap:14px;
+
+}
+
+
+.modal-links a{
+
+padding:12px 22px;
+
+border-radius:10px;
+
+font-weight:600;
+
+text-decoration:none;
+
+transition:transform .2s ease;
+
+}
+
+
+/* live demo button */
+
+.modal-links a:first-child{
+
+background:var(--sage);
+
+color:white;
+
+}
+
+
+/* github button */
+
+.modal-links a:last-child{
+
+background:var(--gold);
+
+color:var(--ink);
+
+}
+
+
+/* hover */
+
+.modal-links a:hover{
+
+transform:translateY(-2px);
+
+}
+
+.modal-features {
+  margin-top: 16px;
+}
+
+.modal-features h4 {
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  color: var(--ink-50);
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.modal-features ul {
+  padding-left: 18px;
+}
+
+.modal-features li {
+  font-size: 14px;
+  margin-bottom: 6px;
+  color: var(--ink-80);
+  line-height: 1.5;
+}

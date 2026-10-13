@@ -1,0 +1,155 @@
+.timeline-section{
+background:var(--parchment-light);
+padding:160px 0;
+}
+
+.timeline-container{
+max-width:1100px;
+margin:auto;
+padding:0 40px;
+}
+
+/* header */
+
+.timeline-header{
+margin-bottom:60px;
+text-align: center;
+}
+
+.timeline-tag{
+font-family:var(--font-mono);
+font-size:11px;
+letter-spacing:0.12em;
+color:var(--sage);
+display:block;
+margin-bottom:16px;
+}
+
+.timeline-title{
+font-family:var(--font-display);
+font-size:64px;
+font-weight:800;
+}
+
+/* toggle */
+
+.timeline-toggle{
+display:flex;
+gap:14px;
+margin-bottom:80px;
+}
+
+.timeline-toggle button{
+padding:10px 20px;
+border-radius:10px;
+border:1px solid var(--border);
+background:white;
+font-family:var(--font-mono);
+cursor:pointer;
+}
+
+.timeline-toggle button.active{
+background:var(--sage);
+color:white;
+}
+
+/* timeline spine */
+
+.timeline{
+position:relative;
+}
+
+.timeline::before{
+content:"";
+position:absolute;
+left:50%;
+top:0;
+width:2px;
+height:100%;
+background:var(--border);
+transform:translateX(-50%);
+}
+
+/* timeline item */
+
+.timeline-item{
+position:relative;
+width:50%;
+padding:40px 50px;
+}
+
+/* zigzag */
+
+.timeline-item.left{
+left:0;
+text-align:right;
+}
+
+.timeline-item.right{
+left:50%;
+}
+
+/* node */
+
+.timeline-node{
+position:absolute;
+top:48px;
+width:14px;
+height:14px;
+background:var(--sage);
+border-radius:50%;
+border:3px solid var(--parchment-light);
+z-index:2;
+}
+
+.timeline-item.left .timeline-node{
+right:-8px;
+}
+
+.timeline-item.right .timeline-node{
+left:-8px;
+}
+
+/* card */
+
+.timeline-card{
+background:white;
+padding:24px;
+border-radius:14px;
+border:1px solid var(--border);
+
+box-shadow:
+0 10px 40px rgba(0,0,0,0.05);
+
+max-width:380px;
+display:inline-block;
+}
+
+/* typography */
+
+.timeline-date{
+font-family:var(--font-mono);
+font-size:11px;
+color:var(--ink-40);
+display:block;
+margin-bottom:6px;
+}
+
+.timeline-card h3{
+font-family:var(--font-display);
+font-size:20px;
+margin-bottom:4px;
+}
+
+.timeline-card h4{
+font-family:var(--font-mono);
+font-size:12px;
+color:var(--ink-60);
+margin-bottom:10px;
+}
+
+.timeline-card p{
+font-size:14px;
+color:var(--ink-70);
+line-height:1.6;
+}
